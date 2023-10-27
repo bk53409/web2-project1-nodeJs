@@ -1,0 +1,9 @@
+<%- include('partials/header') -%>
+
+<% if (locals.isAuthenticated) { %>
+    <p>Trenutno ste ulogirani. <a href="/profile" class="underline">Vaš profil</a></p>
+<% } else { %>
+    <p>Niste ulogirani <a href="/login" class="underline">Login</a>.</p>
+<% } %>
+
+<%- include('partials/footer') -%>
