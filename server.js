@@ -19,8 +19,7 @@ app.use(express.json());
 
 const config = {
   authRequired: false,
-  auth0Logout: true,
-  baseURL: `https://localhost:${port}`
+  auth0Logout: true
 };
 
 const port = process.env.PORT || 3000;
@@ -57,4 +56,5 @@ app.use(function (err, req, res, next) {
 http.createServer(app)
   .listen(port, () => {
     console.log(`Listening on ${config.baseURL}`);
+    console.log(process.env.NODE_ENV);
   });
